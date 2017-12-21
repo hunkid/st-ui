@@ -1,0 +1,26 @@
+@charset "UTF-8";
+@component-namespace st {
+
+  @b alert {
+    width: 100%;
+    padding: 20px;
+    position: relative;
+
+
+    @modifier success {
+      background-color: #b2ceb7;
+    }
+
+    @modifier info {
+      background-color: #c7ceb2;
+    }
+
+    @modifier warning {
+      background-color: #e08031;
+    }
+
+    @modifier error {
+      background-color: #fef0f0;
+    }
+  }
+}

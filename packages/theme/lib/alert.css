@@ -1,0 +1,18 @@
+@charset "UTF-8";
+.st-alert{
+    width: 100%;
+    padding: 20px;
+    position: relative
+}
+.st-alert--success{
+    background-color: #b2ceb7
+}
+.st-alert--info{
+    background-color: #c7ceb2
+}
+.st-alert--warning{
+    background-color: #e08031
+}
+.st-alert--error{
+    background-color: #fef0f0
+}

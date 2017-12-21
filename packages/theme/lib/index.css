@@ -1,1 +1,53 @@
-@font-face{font-family:awesome-font-icons;src:url(fonts/st-fonts.eot) format("eot"),url(fonts/st-fonts.svg) format("svg"),url(fonts/st-fonts.ttf) format("ttf"),url(fonts/st-fonts.woff) format("woff"),url(fonts/st-fonts.woff2) format("woff2"),}[class^=st-icon-]{font-family:awesome-font-icons!important;speak:none;font-style:normal;font-weight:400;font-variant:normal;text-transform:none;line-height:1;vertical-align:baseline;display:inline-block}.st-icon-close:before{content:"\f00d"};
+@font-face {
+  font-family: 'iconfonts';
+  src: url('./st-ui/packages/theme/src/fonts/iconfonts.eot');
+  src: url('./st-ui/packages/theme/src/fonts/iconfonts.eot') format('embedded-opentype'),
+       url('./st-ui/packages/theme/src/fonts/iconfonts.woff') format('woff'),
+       url('./st-ui/packages/theme/src/fonts/iconfonts.woff2') format('woff2'),
+       url('./st-ui/packages/theme/src/fonts/iconfonts.svg') format('svg'),
+       url('./st-ui/packages/theme/src/fonts/iconfonts.ttf') format('truetype');
+}
+
+[class^="st-icon-"],
+[class*=" st-icon-"] {
+  font-family: 'iconfonts' !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  vertical-align: baseline;
+  display: inline-block;
+  cursor: pointer;
+}
+
+.st-icon-close::before {font-family: 'iconfonts' !important;content: "\f00d"};
+
+@charset "UTF-8";
+
+@component-namespace st {
+
+  @b alert {
+    width: 100%;
+    padding: 20px;
+    position: relative;
+
+
+    @modifier success {
+      background-color: #b2ceb7;
+    }
+
+    @modifier info {
+      background-color: #c7ceb2;
+    }
+
+    @modifier warning {
+      background-color: #e08031;
+    }
+
+    @modifier error {
+      background-color: #fef0f0;
+    }
+  }
+}
