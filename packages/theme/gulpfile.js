@@ -4,6 +4,7 @@ var autoprefixer = require('autoprefixer')
 var cssnext = require('cssnext')
 var cssimport = require('postcss-import')
 var bem = require('postcss-bem-fix')
+var nest = require('postcss-nested')
 // var cssnano = require('cssnano')
 
 var formFonturl = require('./myplugins/formFonturl.js')
@@ -28,6 +29,7 @@ gulp.task('process-css', function() {
         descendent: 'e'
       }
     }),
+    nest,
     formFonturl, autoprefixer, cssnext ]
   return gulp.src('./src/*.css')
              .pipe(postcss(processors)) // 待压缩

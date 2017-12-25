@@ -2,4 +2,5 @@
 
 -----------------------------
 - [x] Alert
-- [ ] Radio
+- [x] Radio
+- [ ] Checkbox
