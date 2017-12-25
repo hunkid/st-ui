@@ -19,7 +19,14 @@
   line-height: 1;
   vertical-align: baseline;
   display: inline-block;
-  cursor: pointer;
 }
 
-.st-icon-close::before {font-family: 'iconfonts' !important;content: "\f00d"};
+.st-icon-close::before {content: "\f00d"}
+
+.st-icon-circle-check::before {content: "\f058"}
+
+.st-icon-circle-error::before {content: "\f057"}
+
+.st-icon-circle-question::before {content: "\f059"}
+
+.st-icon-circle-info::before {content: "\f05a"}

@@ -1,26 +1,61 @@
-@charset "UTF-8";
 @component-namespace st {
 
   @b alert {
     width: 100%;
-    padding: 20px;
+    box-sizing: border-box;
+    padding: 10px 10px 10px 20px;
     position: relative;
-
-
+    display: flex;
+    align-items: center;
     @modifier success {
-      background-color: #b2ceb7;
+      background-color: #b1eebb;
+      color: #50d466;
     }
 
     @modifier info {
-      background-color: #c7ceb2;
+      background-color: #d2ddb0;
+      color: #165f0b;
     }
 
     @modifier warning {
-      background-color: #e08031;
+      background-color: #f0e583;
+      color: #fdba00;
     }
 
     @modifier error {
-      background-color: #fef0f0;
+      background-color: #e29898;
+      color: #e91515;
+    }
+
+    @e content {
+      align-self: flex-start;
+      padding: 0 8px;
+      cursor: default;
+    }
+
+    @e icon {
+      @when big {
+        font-size: 22px;
+      }
+    }
+
+    @e detail {
+      font-size: 14px;
+    }
+
+    @e title {
+      @when bold {
+        font-weight: 900;
+      }
+    }
+
+    @e closebtn {
+      margin-left: auto;
+      margin-right: 0;
+      cursor: pointer;
+      @when customed {
+        font-size: 13px;
+      }
     }
   }
 }

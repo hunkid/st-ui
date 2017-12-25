@@ -1,6 +1,5 @@
 var gulp = require('gulp')
 var postcss = require('gulp-postcss')
-
 var autoprefixer = require('autoprefixer')
 var cssnext = require('cssnext')
 var cssimport = require('postcss-import')
@@ -15,6 +14,7 @@ gulp.task('process-fontsource', function() {
 
 gulp.task('process-css', function() {
   var processors = [
+    cssimport(),
     bem({
       defaultNamespace: undefined, // default namespace to use, none by default
       style: 'suit', // suit or bem, suit by default
@@ -24,10 +24,11 @@ gulp.task('process-css', function() {
         modifier: '--'
       },
       shortcuts: {
-        component: 'b'
+        component: 'b',
+        descendent: 'e'
       }
     }),
-    cssimport, formFonturl, autoprefixer, cssnext ]
+    formFonturl, autoprefixer, cssnext ]
   return gulp.src('./src/*.css')
              .pipe(postcss(processors)) // 待压缩
              .pipe(gulp.dest('./lib'))

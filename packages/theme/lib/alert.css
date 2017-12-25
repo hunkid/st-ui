@@ -1,18 +1,54 @@
-@charset "UTF-8";
-.st-alert{
+.st-alert {
     width: 100%;
-    padding: 20px;
-    position: relative
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+    padding: 10px 10px 10px 20px;
+    position: relative;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center
 }
-.st-alert--success{
-    background-color: #b2ceb7
+.st-alert--success {
+    background-color: #b1eebb;
+    color: #50d466
 }
-.st-alert--info{
-    background-color: #c7ceb2
+.st-alert--info {
+    background-color: #d2ddb0;
+    color: #165f0b
 }
-.st-alert--warning{
-    background-color: #e08031
+.st-alert--warning {
+    background-color: #f0e583;
+    color: #fdba00
 }
-.st-alert--error{
-    background-color: #fef0f0
+.st-alert--error {
+    background-color: #e29898;
+    color: #e91515
+}
+.st-alert__content {
+    -ms-flex-item-align: start;
+        align-self: flex-start;
+    padding: 0 8px;
+    cursor: default
+}
+.st-alert__icon {}
+.st-alert__icon.is-big {
+    font-size: 22px
+}
+.st-alert__detail {
+    font-size: 14px
+}
+.st-alert__title {}
+.st-alert__title.is-bold {
+    font-weight: 900
+}
+.st-alert__closebtn {
+    margin-left: auto;
+    margin-right: 0;
+    cursor: pointer
+}
+.st-alert__closebtn.is-customed {
+    font-size: 13px
 }
