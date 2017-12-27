@@ -33,7 +33,7 @@ export default {
 
   mixins: [Emitter],
 
-  componentName: 'ElRadio',
+  componentName: 'StRadio',
 
   data() {
     return {
@@ -52,7 +52,7 @@ export default {
     isGroup() {
       let parent = this.$parent
       while (parent) {
-        if (parent.$options.componentName !== 'ElRadioGroup') {
+        if (parent.$options.componentName !== 'StRadioGroup') {
           parent = parent.$parent
         } else {
           this._radioGroup = parent
@@ -68,7 +68,7 @@ export default {
       },
       set(val) {
         if (this.isGroup) {
-          this.dispatch('ElRadioGroup', 'input', [val])
+          this.dispatch('StRadioGroup', 'input', [val])
         } else {
           this.$emit('input', val)
         }
@@ -93,4 +93,3 @@ export default {
   }
 }
 </script>
-

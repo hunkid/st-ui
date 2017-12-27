@@ -1,0 +1,82 @@
+@component-namespace st {
+  @b checkbox {
+    cursor: pointer;
+    white-space: nowrap;
+
+    &:hover {
+      .st-checkbox__show {
+        border-color: #1890ff;
+      }
+    }
+
+    @e input {
+      position: relative;
+      @when checked {
+        .st-checkbox__show {
+          border-color: #1890ff;
+          &::after {
+            font-family: 'iconfonts';
+            content: '\f00c';
+            font-size: 14px;
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            display: block;
+            transform: translate(-50%, -50%);
+            transition: transform .15s cubic-bezier(.71,-.46,.88,.6);
+            color: #1890ff;
+          }
+        }
+      }
+
+      @when disabled {
+        cursor: not-allowed;
+        & + .st-checkbox__label {
+          cursor: not-allowed;
+          color: #c0c0c0;
+        }
+        .st-checkbox__show {
+          border-color: #e8e8e8;
+          background-color: #f5f5f5;
+        }
+      }
+
+      @when focused {
+        .st-checkbox__show {
+          border-color: #1890ff;
+        }
+      }
+
+    }
+
+    @e show {
+      position: relative;
+      display: inline-block;
+      left: 2px;
+      width: 16px;
+      height: 16px;
+      z-index: 1;
+      background-color: #fff;
+      border: 1px solid #ccc;
+      vertical-align: middle;
+      transition: all .15s cubic-bezier(.71,-.46,.88,.6);
+
+    }
+
+    @e original {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      margin: auto;
+      opacity: 0;
+      z-index: -1;
+      outline: none;
+    }
+
+    @e label {
+      color: #314659;
+    }
+  }
+}

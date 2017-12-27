@@ -3,4 +3,5 @@
 -----------------------------
 - [x] Alert
 - [x] Radio
-- [ ] Checkbox
+- [x] Checkbox
+- [x] Input

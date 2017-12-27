@@ -1,0 +1,48 @@
+@component-namespace st {
+  @b input {
+    position: relative;
+    font-size: 14px;
+
+    @e inner {
+      height: 35px;
+      line-height: 35px;
+      box-sizing: border-box;
+      border: 1px solid #ccc;
+      box-sizing: border-box;
+      padding-left: 10px;
+      padding-right: 10px;
+      border-radius: 6px;
+      font-family: Helvetica, Tahoma, Arial, STXihei, "华文细黑", "Microsoft YaHei", "微软雅黑", sans-serif;
+      font-size: 16px;
+      color: #60627f;
+      outline: none;
+      &::placeholder {
+        color: #ccc;
+      }
+      &:focus {
+        border-color: #1890ff;
+      }
+    }
+    @e prefix {
+      color: #aaa;
+      position: absolute;
+      left: 10px;
+      top: 10px;
+    }
+    @e suffix {
+      color: #aaa;
+      position: absolute;
+      top: 10px;
+    }
+    @modifier prefix {
+      .st-input__inner {
+        padding-left: 30px;
+      }
+    }
+    @modifier suffix {
+      .st-input__inner {
+        padding-right: 30px;
+      }
+    }
+  }
+}

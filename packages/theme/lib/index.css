@@ -25,11 +25,19 @@
 
 .st-icon-circle-check::before {content: "\f058"}
 
-.st-icon-circle-error::before {content: "\f057"}
+.st-icon-circle-error::before, .st-icon-clear::before {content: "\f057"}
 
 .st-icon-circle-question::before {content: "\f059"}
 
 .st-icon-circle-info::before {content: "\f05a"}
+
+.st-icon-search::before {content: "\f002"}
+
+.st-icon-map-maker::before {content: "\f041"}
+
+.st-icon-calender::before {content: "\f073"}
+
+.st-icon-picture::before {content: "\f03e"}
 
 /* http://meyerweb.com/eric/tools/css/reset/
    v2.0 | 20110126
@@ -236,4 +244,148 @@ table {
 
 .st-radio__label {
   color: #314659;
+}
+
+.st-checkbox {
+  cursor: pointer;
+  white-space: nowrap;
+}
+
+.st-checkbox:hover .st-checkbox__show {
+  border-color: #1890ff;
+}
+
+.st-checkbox__input {
+  position: relative;
+}
+
+.st-checkbox__input.is-focused .st-checkbox__show {
+  border-color: #1890ff;
+}
+
+.st-checkbox__input.is-disabled {
+  cursor: not-allowed;
+}
+
+.st-checkbox__input.is-disabled + .st-checkbox__label {
+  cursor: not-allowed;
+  color: #c0c0c0;
+}
+
+.st-checkbox__input.is-disabled .st-checkbox__show {
+  border-color: #e8e8e8;
+  background-color: #f5f5f5;
+}
+
+.st-checkbox__input.is-checked .st-checkbox__show {
+  border-color: #1890ff;
+}
+
+.st-checkbox__input.is-checked .st-checkbox__show::after {
+  font-family: 'iconfonts';
+  content: '\f00c';
+  font-size: 14px;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  display: block;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  -webkit-transition: -webkit-transform .15s cubic-bezier(.71,-.46,.88,.6);
+  transition: -webkit-transform .15s cubic-bezier(.71,-.46,.88,.6);
+  transition: transform .15s cubic-bezier(.71,-.46,.88,.6);
+  transition: transform .15s cubic-bezier(.71,-.46,.88,.6), -webkit-transform .15s cubic-bezier(.71,-.46,.88,.6);
+  color: #1890ff;
+}
+
+.st-checkbox__show {
+  position: relative;
+  display: inline-block;
+  left: 2px;
+  width: 16px;
+  height: 16px;
+  z-index: 1;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  vertical-align: middle;
+  -webkit-transition: all .15s cubic-bezier(.71,-.46,.88,.6);
+  transition: all .15s cubic-bezier(.71,-.46,.88,.6);
+}
+
+.st-checkbox__original {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+  opacity: 0;
+  z-index: -1;
+  outline: none;
+}
+
+.st-checkbox__label {
+  color: #314659;
+}
+
+.st-input {
+  position: relative;
+  font-size: 14px;
+}
+
+.st-input__inner {
+  height: 35px;
+  line-height: 35px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+  padding-left: 10px;
+  padding-right: 10px;
+  border-radius: 6px;
+  font-family: Helvetica, Tahoma, Arial, STXihei, "华文细黑", "Microsoft YaHei", "微软雅黑", sans-serif;
+  font-size: 16px;
+  color: #60627f;
+  outline: none;
+}
+
+.st-input__inner::-webkit-input-placeholder {
+  color: #ccc;
+}
+
+.st-input__inner:-ms-input-placeholder {
+  color: #ccc;
+}
+
+.st-input__inner::-ms-input-placeholder {
+  color: #ccc;
+}
+
+.st-input__inner::placeholder {
+  color: #ccc;
+}
+
+.st-input__inner:focus {
+  border-color: #1890ff;
+}
+
+.st-input__prefix {
+  color: #aaa;
+  position: absolute;
+  left: 10px;
+  top: 10px;
+}
+
+.st-input__suffix {
+  color: #aaa;
+  position: absolute;
+  top: 10px;
+}
+
+.st-input--prefix .st-input__inner {
+  padding-left: 30px;
+}
+
+.st-input--suffix .st-input__inner {
+  padding-right: 30px;
 }

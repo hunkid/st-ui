@@ -23,6 +23,11 @@
 
 .st-icon-close::before {content: "\f00d"}
 .st-icon-circle-check::before {content: "\f058"}
-.st-icon-circle-error::before {content: "\f057"}
+.st-icon-circle-error::before, .st-icon-clear::before {content: "\f057"}
 .st-icon-circle-question::before {content: "\f059"}
 .st-icon-circle-info::before {content: "\f05a"}
+
+.st-icon-search::before {content: "\f002"}
+.st-icon-map-maker::before {content: "\f041"}
+.st-icon-calender::before {content: "\f073"}
+.st-icon-picture::before {content: "\f03e"}

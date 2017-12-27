@@ -1,0 +1,51 @@
+.st-input {
+    position: relative;
+    font-size: 14px;
+}
+.st-input__inner {
+    height: 35px;
+    line-height: 35px;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+    padding-left: 10px;
+    padding-right: 10px;
+    border-radius: 6px;
+    font-family: Helvetica, Tahoma, Arial, STXihei, "华文细黑", "Microsoft YaHei", "微软雅黑", sans-serif;
+    font-size: 16px;
+    color: #60627f;
+    outline: none;
+}
+.st-input__inner::-webkit-input-placeholder {
+    color: #ccc;
+}
+.st-input__inner:-ms-input-placeholder {
+    color: #ccc;
+}
+.st-input__inner::-ms-input-placeholder {
+    color: #ccc;
+}
+.st-input__inner::placeholder {
+    color: #ccc;
+}
+.st-input__inner:focus {
+    border-color: #1890ff;
+}
+.st-input__prefix {
+    color: #aaa;
+    position: absolute;
+    left: 10px;
+    top: 10px;
+}
+.st-input__suffix {
+    color: #aaa;
+    position: absolute;
+    top: 10px;
+}
+.st-input--prefix .st-input__inner {
+    padding-left: 30px;
+}
+.st-input--suffix .st-input__inner {
+    padding-right: 30px;
+}
